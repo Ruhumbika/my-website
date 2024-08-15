@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruhumbika | Contact</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+    #home{
+        border-bottom: 2px solid black;
+        color: rgb(0, 0, 0);
+    }
+
+    @keyframes fade-up{
+        0%{
+           opacity: 0;
+           transform: translateX(100px) scale(2);
+        }
+     
+        100%{
+           opacity: 1;
+           transform:translateY(0px) scale(1);
+        }
+     } 
+     @keyframes fade-down{
+        0%{
+           opacity: 0;
+           transform: translateX(500px) scale(0.2);
+        }
+     
+        100%{
+           opacity: 1;
+           transform:translateY(0px) scale(1);
+        }
+     } 
+
+ body{
+    /*background-image: url(./rbk.jpg);*/
+    font-family: verdana;
+    background-image: url('img/about-bg.jpg');
+    
+    
+ }
+ 
+ body::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   
+  background-size: cover;
+  background-position: center;
+  filter: brightness(70%);
+  z-index: -5;
+
+
+  }
+ 
+
+ 
+
+ bo
+ .contact h2{
+    text-align: center;
+    animation: fade-up 2s;
+  }
+  .contact section{
+    margin-top: 45px;
+    
+  }
+  .contact_us{
+    display: flex;
+    border: 1px solid black;
+    height: 70vh;
+  
+  
+  }
+  .right textarea{
+    height: 40vh;
+    width: 100%;
+    outline: none;
+    font-family: menus;
+    border-color:black;
+    font-weight: bold;
+  }
+  .left{
+    margin: 25px;
+    padding: 15px;
+  }
+  .right{
+    margin: 0;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    animation: fade-down 2s;
+  }
+  .left input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    padding: 5px;
+    font-family:menus;
+    margin: 15px;
+    width: 70%;
+    font-weight: bold;
+    font-family: verdana;
+    animation: fade-down 2s;
+  }
+  .left select input{
+    width: 50%;
+  }
+  .left select{
+    width:12%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+  }
+  .right h5{
+    font-family: header;
+  }
+
+  button{
+    border: 1px solid black;
+width: 220px;
+height: 60px;
+  }
+  button:hover{
+    background-color: grey;
+  }
+  .contact_right{
+    text-align: center;
+    margin: 42px;
+    animation: fade-up 1s;
+  }
+
+  .container.left{
+    background-image: url('images/form (2).avif');
+    background-size: cover;
+  }
+  .container.right{
+    background-image: url('images/form (6).jpg');
+    background-size: cover;
+  }
+
+  .contact_us{
+    background-image: url('images/form (7).jpg');
+  }
+ 
+ 
+  
+  
+</style>
+<body>
+  
+    <nav>
+        <div class="container nav__container">
+            <ul class="nav__menu">
+                <li><a href="login.php" >Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="courses.htm">Courses</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html" id="home">Contact</a></li>
+            </ul>
+            <button></button>
+            <button></button>
+            
+        </div>
+    </nav>
+
+
+    
+    <section class="container contact">
+        <h2 id="contact"><a href="#"><span>CON</span>TACT<span> M</span>E</a></h2>
+        <div class="contact_us">
+            <div class="container left">
+                <form name="form1" action="#"> 
+                    <input type="text" name="text4" id="fname" placeholder="First Name" required="">
+                    <input type="text" name="text3" id="uname" placeholder="User Name" required="">
+                    <br>
+                    <input type="text" name="text1" id="user_email" placeholder="Email"/>
+                    &nbsp;
+                    <!-- <li class="submit"><input type="submit" name="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)"/></li> -->
+                     &nbsp;
+                <br><br>
+                 <select>
+                    <option value="#image1">+255</option>
+                    <option value="">+254</option>
+                    <option value="">+253</option>
+                    <option value="">+252</option>
+                    <opion value="">+251</opion>
+                    <option value="">+250</option>
+                    <option value="">+1</option>
+                 </select>
+                 <input type="number" name="text2" id="phone_number" placeholder="Phone-Number" required="">
+                 <br><br>
+                 
+                 <button class="validate" onclick="ValidateEmail(document.form1.text1)">SEND</button>
+                </form>
+                 
+                
+            </div>
+    
+            <div class="container right">
+                <h2>RUHUMBIKA JOHN</h2>
+                <div class="contact_right">
+                    <h4>Contact</h4>
+                   <br>
+                        <p>+225787550399</p>
+                        <p>ruhumbikamtumbajohn@gmail.com</p>
+                        <p>+255745143116</p>
+                        <p>johnmtumbakatuju@gmail.com</p>
+                    
+                </div>
+                     
+            </div>
+          
+        </div>
+        
+    </section>
+  
+
+
+
+<footer>
+    <h2 class="h2f">STAY IN TOUCH</h2>
+    <div class="container footer__container">
+        
+        <div class="footer__1">
+            <a href="index.html" class="footer__logo"><h2>RUHUMBIKA JOHN</h4></a>
+            <p>
+                Welcome to my personal website! I'm Aikambe Kishe, a passionate university student with a love for Website development. Here, 
+                you'll find insights into my projects, experiences, and thoughts. Explore my work, connect with me, and join me on this exciting journey 
+                of creativity and discovery.
+            </p>
+        </div>
+
+
+
+
+
+            <div class="footer__2">
+                <h4>links</h4>
+                <ul class="permalinks">
+                    <li><a href="login.php" >Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="#" id="home">Contact</a></li>
+               </ul>
+            </div>
+
+           <div class="footer__3">
+            <h4>Privacy</h4>
+            <ul class="privacy">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">©Copyright 2024</a></li>
+            <li><a href="#">Intellectual Property</a></li>
+            </ul>
+           </div>
+
+            <div class="footer__4">
+                <h4>Contact</h4>
+                <div>
+                    
+                  <p>+225787550399</p>
+                  <p>ruhumbikamtumbajohn@gmail.com</p>
+                  <p>+255745143116</p>
+                  <p>johnmtumbakatuju@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="footer__socials">
+                <li>
+                <a href="#"><i class="uil uil-facebook-f"></i></a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="uil uil-facebook-f"></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="uil uil-facebook-f"></i></a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="uil uil-facebook-f"></i></a>
+                            </li>
+            </div>
+                 
+
+
+
+      
+    </div>
+
+</footer>
+<p id="end">OFFICIAL RUHUMBIKA'S WEBSITE<br> ©2024<p id="cd"></p></p>
+
+
+
+
+
+
+
+
+
+
+<script src="./index.js"></script>
+
+
+
+<!--*************END OF WEB-END***************-->
+</body>
+</html>

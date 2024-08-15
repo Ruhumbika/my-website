@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Courses</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .search-container {
+            margin-top: 100px;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .notification {
+            background-size: cover;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            background-position: center;
+        }
+        .notification h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .notification p {
+            font-size: 18px;
+        }
+        .contact-info {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        .contact-info a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+        }
+        .social-links img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container search-container">
+        <h2 class="text-center">Search Courses</h2>
+        <form action="search_courses.php" method="get">
+            <div class="row mt-4">
+                <div class="col-10">
+                    <input type="text" name="search" class="form-control" placeholder="Search courses" aria-label="Search">
+                </div>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-primary w-100">Search</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Dynamic Notifications -->
+        <div id="course-notification" class="notification mt-5" style="background-image: url('img/rjayprofile1.png');">
+            <h4>Present Courses</h4>
+            <p id="course-info">Loading current courses...</p>
+        </div>
+
+        <div id="image-notification" class="notification" style="background-image: url('img/rjayprofile2.png');">
+            <h4>Explore the World of Education</h4>
+            <p id="dynamic-text">Education is the most powerful weapon which you can use to change the world.</p>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="contact-info">
+            <h3>About the Developer</h3>
+            <p>Hello! I’m Ruhumbika Mtumba John, the creator of this website. I’m passionate about web development and committed to providing a great learning experience. Feel free to ask me about my journey or how I developed this site. Let’s explore the world of knowledge together!</p>
+            <p>Contact: <a href="tel:+254787550399">0787550399</a> | Email: <a href="mailto:ruhumbikamtumbajohn@gmail.com">ruhumbikamtumbajohn@gmail.com</a></p>
+            <p>Connect with me on social media:</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/c/ruhumbikamtumbajohn" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
+                </a>
+                <a href="https://www.tiktok.com/@rjay20020701" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/tiktok.png" alt="TikTok">
+                </a>
+                <a href="https://twitter.com/Rjay20020701" target="_blank">
+                    <img src="https://abs.twimg.com/icons/apple-touch-icon-192x192.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/rjay.huduma" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/rjay" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYkPQBB1zL6vko5mgGQeIjQmZQeF9LZ85iC2nFNpDjb55ZRDST7w1TPhZ" crossorigin="anonymous"></script>
+
+    <!-- Internal JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dynamic background image and text for notifications
+            const dynamicImages = [
+                {url: 'images/library.jpeg', text: 'University of Dar es Salaam - Leading in Excellence'},
+                {url: 'img/about-plan.jpg', text: 'Harvard University - Pioneering Education Globally'},
+                {url: 'images/network.jpeg', text: 'Connecting Students Worldwide through Networking'},
+                {url: 'images/IT.jpeg', text: 'Empowering Future Coders through Programming'}
+            ];
+
+            const imageNotification = document.getElementById('image-notification');
+            const dynamicText = document.getElementById('dynamic-text');
+            let currentIndex = 0;
+
+            setInterval(() => {
+                const current = dynamicImages[currentIndex];
+                imageNotification.style.backgroundImage = `url('${current.url}')`;
+                dynamicText.textContent = current.text;
+                currentIndex = (currentIndex + 1) % dynamicImages.length;
+            }, 5000); // Change image every 5 seconds
+
+            // Load present courses
+            fetch('get_courses.php')
+                .then(response => response.json())
+                .then(data => {
+                    const courseInfo = document.getElementById('course-info');
+                    if (data.length > 0) {
+                        let currentIndex = 0;
+
+                        function displayCourse() {
+                            courseInfo.innerHTML = `<strong>${data[currentIndex].course_name}</strong>`;
+                            currentIndex = (currentIndex + 1) % data.length;
+                        }
+
+                        displayCourse(); // Show the first course immediately
+                        setInterval(displayCourse, 5000); // Change course every 5 seconds
+                    } else {
+                        courseInfo.textContent = 'No courses found.';
+                    }
+                })
+                .catch(error => console.error('Error fetching courses:', error));
+        });
+    </script>
+</body>
+</html>

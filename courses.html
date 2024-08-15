@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Courses</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+     #home{
+        border-bottom: 2px solid black;
+        color: black;
+    }
+    body{
+      background-image: url("images/background (2).jpg");
+      background-size: cover;
+      backface-visibility: initial;
+      background-repeat: space;
+      background-position: center;
+    }
+       
+    @font-face {
+        font-family: header;
+        src: url(../fonts/Abel-Regular.ttf);
+    }
+    form{
+      padding: 25px;
+      background: #fff;
+       max-width: 500px;
+       width: 100%;
+       border-radius: 7px;
+
+      box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      background: linear-gradient(135deg, #ff07, #407008);
+    }
+    form {
+        margin-bottom: 15px;
+        position: relative;
+    }
+    form h2{
+        font-size: 27px;
+        text-align: center;
+        margin: 0px 0 30px;
+        font-family: header;
+        font-family: verdana;
+    }
+    form label{
+        margin-bottom: 7px;
+        font-size: 15px;
+        display: block;
+        font-weight: bold;
+    }
+    
+    form input,
+    form .check{
+      height: 15px;
+      display: block; 
+      padding: 24px; 
+      width: 5%;
+      font-weight: bolder;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: larger;
+     }
+    form label, 
+    form .check{
+        display: inline;
+        font-weight: bold
+
+    }
+    .form-group{
+        margin-bottom: 15px;
+    }
+    .form-group input{
+      height: 45px;
+      padding: 10px;
+      width: 100%;
+      font-size: 15px;
+      outline: none;
+      background: #fff;
+      border-radius: 3px;
+      border: 1px solid #bfbfbf;
+    }
+
+    .radio_choice input{
+        display: inline;
+    }
+    
+    .submit-btn {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+      }
+      
+      .submit-btn button {
+        color: white;
+        border: none;
+        height: auto;
+        text-align: center;
+        font-size: 16px;
+        padding: 13px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+        text-align: center;
+        background: #1BB295;
+        transition: 0.2s ease;
+        width: 220px;
+      }
+      
+      .submit-btn input:hover {
+        background: rgba(0, 0, 255, 0.35);
+      }
+      form p{
+        display: none;
+        color: red;
+        font-family: header;
+        font-weight: bold;
+      }
+
+      .courses section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap:5rem;
+        height: 100%;;
+      }
+      
+    
+</style>
+
+<body>
+    <nav>
+        <div class="container nav__container">
+            <ul class="nav__menu">
+                <li><a href="login.php">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.php" id="home">Courses</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button></button>
+            <button></button>
+            
+        </div>
+    </nav>
+
+    <div class="container courses_box">
+        <div class="courses__left">
+            <form  action="add_course.php" method="post">
+                <h2>COURSE REGISTRATION FORM</h2>
+                 <div class="form-group">
+                   <label for="course name">Course Name</label>
+                   <input type="text" id="cname"name="cname" placeholder="Enter course name" required>
+                   <p id="error1">*This field is required</p>
+                 </div>
+                   <div class="form-group">
+                     <label for="course code">Course code</label>
+                     <input type="text" id="ccode" name="ccode" placeholder="Enter course code" required>
+                     <p id="error2">*This field is required</p>
+                     
+                   </div>
+                   <div class="form-group">
+                     <label for="Explaination">Brief description</label>
+                     <input type="text" name="cbe" id="cbe" placeholder="Brief explanation" required>
+                     <p id="error3">*This field is required</p>
+                   </div>
+                   <div class="radio_choice">
+                     <label for="semester"> Current Semester</label>
+                   I<input type="radio" name="SOS" id="SOS" required>
+                   II<input type="radio" name="SOS" id="SOS" required>
+                   <p id="error4">*This field is required</p>
+                   </div>
+                   <div class="radio_choice">
+                  <label for="YOS">Year of study</label>
+                  I<input type="radio" name="YOS" id="YOS" required>
+                  II<input type="radio" name="YOS" id="YOS" required>
+                  III<input type="radio" name="YOS" id="YOS" required>
+                  IV<input type="radio" name="YOS" id="YOS" required>
+                  V<input type="radio" name="YOS" id="YOS" required>
+                  <p id="error5">*This field is required</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="instructor">Instructor</label>
+                    <input type="text-area" name="cinstructor" id="cinstructor" placeholder="Enter instructors name" required>
+                    <p id="error6">*This field is required</p>
+                  </div>
+                   <div class="form-group">
+                     <label for="Department">Department</label>
+                     <input type="text" id="department" name="department" placeholder="Enter Department concerned" required>
+                     <p id="error7">*This field is required</p>
+                   </div>
+                   <div class="radio_choice">
+                    <label for="Grade">Grade Obtained</label>
+                    A<input type="radio" name="YOS" id="grade" required>
+                    B<input type="radio" name="YOS" id="grade" required>
+                    C<input type="radio" name="YOS" id="grade" required>
+                    D<input type="radio" name="YOS" id="grade" required>
+                    F<input type="radio" name="YOS" id="grade" required>
+                    <p id="error8">*This field is required</p>
+                    </div>
+                   <div class="form-group submit-btn">
+                     <button type="submit" onclick="go()">SUBMIT</button>
+                     <button type="reset">RESET</button>
+                   </div>
+             </form>
+               
+        </div>
+
+        <div class="courses__right">
+
+                <article class="course">
+                <div class="course__image">
+                    <img src="images\IT (2).jpeg" class="img-fluid">
+                </div>
+    
+                <div class="courses__info">
+                <h4>COURSES ATTENDED SO FAR</h4>
+                <p>
+                   Web Development, Marketing,
+                   Accounting, Statitics,
+                   Microeconomics,Probability Theorem,
+                   Programming in C, Networking,
+                </p>
+                
+            </div>
+            </article>
+
+        </div>
+    </div>
+
+
+<footer>
+    <h2 class="h2f">STAY IN TOUCH</h2>
+    <div class="container footer__container">
+        
+        <div class="footer__1">
+            <a href="index.html" class="footer__logo"><h2>RUHUMBIKA JOHN</h4></a>
+            <p>
+                Welcome to my personal website! I'm Aikambe Kishe, a passionate university student with a love for Website development. Here, 
+                you'll find insights into my projects, experiences, and thoughts. Explore my work, connect with me, and join me on this exciting journey 
+                of creativity and discovery.
+
+            </p>
+        </div>
+
+
+
+
+
+            <div class="footer__2">
+                <h4>links</h4>
+                <ul class="permalinks">
+                <li><a href="login.php" >Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="#" id="home">Courses</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+               </ul>
+            </div>
+
+           <div class="footer__3">
+            <h4>Privacy</h4>
+            <ul class="privacy">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#"> ©Copyright 2024</a></li>
+            <li><a href="#">Intellectual Property</a></li>
+            </ul>
+           </div>
+
+            <div class="footer__4">
+                <h4>Contact</h4>
+                <div>
+                    
+                  <p>+225787550399</p>
+                  <p>ruhumbikamtumbajohn@gmail.com</p>
+                  <p>+255745143116</p>
+                  <p>johnmtumbakatuju@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="footer__socials">
+                <li>
+                <a href="#"><i class="uil uil-facebook-f"></i></a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="uil uil-facebook-f"></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="uil uil-facebook-f"></i></a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="uil uil-facebook-f"></i></a>
+                            </li>
+            </div>
+                 
+
+
+
+      
+    </div>
+
+</footer>
+<p id="end">OFFICIAL RUHUMBIKA'S WEBSITE<br> ©2024<p id="cd"></p></p>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<!--*************END OF WEB-END***************-->
+</body>
+
+<script>
+    function go(){
+        var a=document.getElementById('cname').value;
+        var b=document.getElementById('ccode').value;
+        var c=document.getElementById('cbe').value;
+        var d=document.getElementById('SOS').value;
+        var e=document.getElementById('YOS').value;
+        var f=document.getElementById('cinstructor').value;
+        var g=document.getElementById('department').value;
+        var h=document.getElementById('grade').value;
+       
+    
+        if(a!="" && b!="" && c!="" && d!="" && e!="" && f!="" && g!="" && h!=""){
+              alert("Course Regestration success");
+              setTimeout(function(){
+                location.reload();
+               }, 5000); // 3000 milliseconds = 3 seconds
+    
+        }else{
+    
+          if(a==""){
+             document.getElementById("ufname").style.borderColor="red";
+             document.getElementById('error1').style.display="block";
+             setTimeout(function(){
+              location.reload();
+             }, 5000); // 3000 milliseconds = 3 seconds
+          }
+          if(b==""){
+             document.getElementById("uemail").style.borderColor="red";
+             document.getElementById('error2').style.display="block";
+             setTimeout(function(){
+              location.reload();
+             }, 5000); // 3000 milliseconds = 3 seconds
+          }
+          if(c==""){
+             document.getElementById("uDOB").style.borderColor="red";
+             document.getElementById('error3').style.display="block";
+             setTimeout(function(){
+              location.reload();
+             }, 5000); // 3000 milliseconds = 3 seconds
+          }
+          if(d==""){
+             document.getElementById("gender").style.borderColor="red";
+             document.getElementById('error4').style.display="block";
+             setTimeout(function(){
+              location.reload();
+             }, 5000); // 3000 milliseconds = 3 seconds
+          }
+          if(e==""){
+             document.getElementById("pass").style.borderColor="red";
+             document.getElementById('error5').style.display="block";
+             setTimeout(function(){
+              location.reload();
+             }, 5000); // 3000 milliseconds = 3 seconds
+          }
+          if(f==""){
+           // document.getElementById("pass").style.borderColor="red";
+            document.getElementById('error6').style.display="block";
+            setTimeout(function(){
+              location.reload();
+             }, 5000); // 3000 milliseconds = 3 seconds
+         }
+
+         if(g==""){
+            // document.getElementById("pass").style.borderColor="red";
+             document.getElementById('error7').style.display="block";
+             setTimeout(function(){
+               location.reload();
+              }, 5000); // 3000 milliseconds = 3 seconds
+          }
+
+          if(h==""){
+            // document.getElementById("pass").style.borderColor="red";
+             document.getElementById('error8').style.display="block";
+             setTimeout(function(){
+               location.reload();
+              }, 5000); // 3000 milliseconds = 3 seconds
+          }
+        }
+    }
+    </script>
+</html>
