@@ -1,0 +1,3 @@
+/usr/bin/mysqld_safe: Deprecated program name. It will be removed in a future release, use 'mariadbd-safe' instead
+250822 22:15:35 mysqld_safe Logging to syslog.
+250822 22:15:35 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql

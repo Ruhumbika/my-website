@@ -1,0 +1,15 @@
+nohup: ignoring input
+
+> dev
+> vite --host 0.0.0.0
+
+Port 5173 is in use, trying another one...
+
+  VITE v6.3.5  ready in 123 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: http://172.30.0.2:5174/
+
+  LARAVEL v11.45.2  plugin v1.3.0
+
+  ➜  APP_URL: http://localhost
